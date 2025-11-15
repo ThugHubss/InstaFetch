@@ -1,262 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clips-Ops — Media Downloader Hub</title>
-    <link rel="canonical" href="https://clipsops.com/" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- SEO + OpenGraph -->
-    <meta property="og:title" content="Clips-Ops — Media Downloader Hub" />
-    <meta
-      property="og:description"
-      content="Clips-Ops — Download videos, music, and media from all your favorite platforms instantly with style."
-    />
-    <meta property="og:image" content="https://files.catbox.moe/6mlafu.jpg" />
-    <meta property="og:url" content="https://clipsops.com/" />
-    <meta
-      name="keywords"
-      content="Clips-Ops, Media Downloader, Video Downloader, Music Downloader, Automation, Online Tools"
-    />
-    <meta
-      name="description"
-      content="Clips-Ops — The ultimate hub to download media from YouTube, Instagram, Pinterest, and more."
-    />
-    <meta name="author" content="Clips-Ops" />
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" />
-    <style>
-      /* ===== GLOBAL AESTHETIC ===== */
-      body {
-        background: #0f0f0f;
-        color: #dcdcdc;
-        font-family: 'Press Start 2P', cursive;
-        text-shadow: 0 0 3px rgba(176, 176, 176, 0.8);
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-      }
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://h.top4top.io/p_3593sctri1.jpg') no-repeat
-          center/cover;
-        filter: blur(8px) brightness(0.7);
-        z-index: -1;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      /* ===== FIXED HEADER LAYOUT ===== */
-      header {
-        width: 100%;
-        padding: 30px 0 10px;
-        display: flex;
-        justify-content: center;
-      }
+  <title>Clips-Ops — Media Downloader Hub</title>
+  <link rel="canonical" href="https://clipsops.store/" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-      .header-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        max-width: 900px;
-        height: 70px; /* Fixed height for perfect alignment */
-      }
+  <!-- SEO + OpenGraph -->
+  <meta property="og:title" content="Clips-Ops — Media Downloader Hub" />
+  <meta property="og:description" content="Clips-Ops — Download videos, music, and media from all your favorite platforms instantly with style." />
+  <meta property="og:image" content="https://files.catbox.moe/6mlafu.jpg" />
+  <meta property="og:url" content="https://clipsops.store/" />
+  <meta name="keywords" content="Clips-Ops, Media Downloader, Video Downloader, Music Downloader, Automation, Online Tools" />
+  <meta name="description" content="Clips-Ops — The ultimate hub to download media from YouTube, Instagram, Pinterest, and more." />
+  <meta name="author" content="Clips-Ops" />
 
-      .title-group {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        flex: 1;
-      }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 
-      .title-group h1 {
-        color: #fff;
-        font-size: 1.1rem;
-        margin: 0;
-        line-height: 1.2;
-        text-shadow: none !important;
-      }
+  <style>
+    /* ===== GLOBAL AESTHETIC ===== */
+    body {
+      background: #0f0f0f;
+      color: #dcdcdc;
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 0 0 3px rgba(176,176,176,0.8);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+    }
 
-      .title-group p {
-        font-size: 0.58rem;
-        color: #aaa;
-        margin-top: 4px;
-        line-height: 1.3;
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url("https://h.top4top.io/p_3593sctri1.jpg") no-repeat center/cover;
+      filter: blur(8px) brightness(0.7);
+      z-index: -1;
+    }
 
-      .logo-top {
-        width: auto;
-        height: 70px; /* Matches header height */
-        border-radius: 12px;
-        object-fit: contain;
-      }
+    header {
+      padding: 40px 20px 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
-      /* Mobile Fix */
-      @media (max-width: 500px) {
-        .header-row {
-          height: 60px;
-        }
+    /* NEW HEADER WRAPPER */
+    .header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 900px;
+    }
 
-        .logo-top {
-          height: 60px;
-        }
+    .header-text {
+      text-align: left;
+    }
 
-        .title-group h1 {
-          font-size: 0.9rem;
-        }
+    header h1 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      text-shadow: none !important;
+    }
 
-        .title-group p {
-          font-size: 0.5rem;
-        }
-      }
+    header p {
+      font-size: 0.55rem;
+      color: #aaa;
+    }
 
-      /* ===== CARDS ===== */
-      .api-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        width: 90%;
-        max-width: 1000px;
-        margin: 40px auto;
-      }
+    /* LOGO RESTORED */
+    .logo-top {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
 
-      .api-card {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid #333;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
-        text-align: center;
-        transition: 0.3s ease;
-        position: relative;
-      }
-      .api-card:hover {
-        transform: translateY(-4px);
-        border-color: #00ffcc;
-      }
-      .api-card img {
-        width: 60px;
-        height: 60px;
-        border-radius: 10px;
-        image-rendering: pixelated;
-      }
-      .api-card h2 {
-        color: #fff;
-        font-size: 0.65rem;
-        margin: 10px 0;
-      }
-      .api-card p {
-        color: #ccc;
-        font-size: 0.5rem;
-        margin-bottom: 12px;
-      }
+    /* ===== CARDS ===== */
+    .api-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
 
-      /* Inputs */
-      .url-input {
-        width: 90%;
-        padding: 8px;
-        font-size: 0.55rem;
-        border-radius: 8px;
-        border: 1px solid #555;
-        background: #111;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 10px;
-      }
+    .api-card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+      text-align: center;
+      transition: 0.3s ease;
+      position: relative;
+    }
 
-      /* Buttons */
-      .btn {
-        display: inline-block;
-        font-size: 0.55rem;
-        color: #fff;
-        background: linear-gradient(90deg, #555, #888);
-        border-radius: 6px;
-        padding: 8px 15px;
-        margin: 5px;
-        cursor: pointer;
-        font-family: 'Minecraftia', monospace;
-        text-transform: none;
-      }
-      .btn:hover {
-        transform: scale(1.05);
-        background: linear-gradient(90deg, #777, #aaa);
-      }
+    .api-card:hover {
+      transform: translateY(-4px);
+      border-color: #00ffcc;
+    }
 
-      /* Footer */
-      footer {
-        margin: 40px 0 20px;
-        text-align: center;
-        font-size: 0.5rem;
-        color: #777;
-      }
+    .api-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      image-rendering: pixelated;
+    }
 
-      /* ===== POPUP ===== */
-      .popup-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(6px);
-        z-index: 999;
-        justify-content: center;
-        align-items: center;
-      }
+    .api-card h2 {
+      color: #fff;
+      font-size: 0.65rem;
+      margin: 10px 0;
+    }
 
-      .popup {
-        background: rgba(30, 30, 30, 0.95);
-        border: 1px solid #444;
-        border-radius: 10px;
-        width: 300px;
-        padding: 20px;
-        text-align: center;
-        animation: popIn 0.3s ease;
-      }
+    .api-card p {
+      color: #ccc;
+      font-size: 0.5rem;
+      margin-bottom: 12px;
+    }
 
-      @keyframes popIn {
-        from {
-          transform: scale(0.8);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ===== PERFECTLY ALIGNED HEADER ===== -->
-    <header>
-      <div class="header-row">
-        <div class="title-group">
-          <h1>Clips-Ops</h1>
-          <p>DOWNLOAD VIDEOS FROM ANY PLATFORM — NO WATERMARK</p>
-        </div>
-        <img
-          src="https://files.catbox.moe/hk6i87.jpg"
-          alt="Clips-Ops Logo"
-          class="logo-top"
-        />
+    .url-input {
+      width: 90%;
+      padding: 8px;
+      font-size: 0.55rem;
+      border-radius: 8px;
+      border: 1px solid #555;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 0.55rem;
+      color: #fff;
+      background: linear-gradient(90deg, #555, #888);
+      border-radius: 6px;
+      padding: 8px 15px;
+      margin: 5px;
+      cursor: pointer;
+      font-family: 'Minecraftia', monospace;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      text-align: center;
+      font-size: 0.5rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-wrap">
+      <div class="header-text">
+        <h1>Clips-Ops</h1>
+        <p>DOWNLOAD VIDEOS FROM ANY PLATFORM — NO WATERMARK</p>
       </div>
-    </header>
+
+      <img src="https://files.catbox.moe/hk6i87.jpg" class="logo-top">
+    </div>
+  </header>
 
   <main class="api-list">
     <!-- Instagram -->
