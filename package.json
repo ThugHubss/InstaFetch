@@ -1,7 +1,7 @@
 {
-  "name": "ClipsOps",
+  "name": "InstaFetch",
   "version": "1.0.0",
-  "description": "ClipOps Multi Downloader API (TikTok, Pinterest, Instagram, YouTube MP3/MP4)",
+  "description": "InstaFetch Multi Downloader API (TikTok, Pinterest, Instagram, YouTube MP3/MP4)",
   "main": "server.js",
   "type": "module",
   "scripts": {
